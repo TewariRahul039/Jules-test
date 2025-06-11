@@ -1,0 +1,50 @@
+content:
+.message-item {
+  margin-bottom: 10px;
+  display: flex;
+  animation: fadeIn 0.3s ease-in-out; /* Add a little fade-in animation */
+}
+
+.message-item.user {
+  justify-content: flex-end; /* Align user messages to the right */
+}
+
+.message-item.bot {
+  justify-content: flex-start; /* Align bot messages to the left */
+}
+
+.message-item .message-content {
+  background-color: #f0f0f0; /* Default background */
+  padding: 10px 15px; /* Slightly increased padding */
+  border-radius: 18px; /* Slightly more rounded */
+  max-width: 70%; /* Increased max-width a bit */
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05); /* Subtle shadow */
+}
+
+.message-item.user .message-content {
+  background-color: #007bff; /* Blue for user */
+  color: white;
+}
+
+.message-item.bot .message-content {
+  background-color: #e9e9eb; /* Light grey for bot */
+  color: #333; /* Darker text for bot messages for better contrast */
+}
+
+.message-content p {
+  margin: 0;
+  word-wrap: break-word; /* Ensure long words break */
+  white-space: pre-wrap; /* Preserve whitespace and newlines */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
